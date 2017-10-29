@@ -15,13 +15,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./11_Rightofway.jpg "Right of Way"
-[image3]: ./11_Rightofway.jpg "Right of Way"
-[image4]: ./12_PriorityRoad.jpg "Priority Road"
-[image5]: ./14_Stop.jpg "Stop Sign"
-[image6]: ./17_Noentry.jpg "No Entry"
-[image7]: ./25_RoadWork.jpg "Road Work"
-[image8]: ./33_RightOnly.jpg "Right Only"
+[image1]: ./Resources/TrainSample.png "Analysis of Training Sample"
+[image3]: ./Resources/11_Rightofway.jpg "Right of Way"
+[image4]: ./Resources/12_PriorityRoad.jpg "Priority Road"
+[image5]: ./Resources/14_Stop.jpg "Stop Sign"
+[image6]: ./Resources/17_Noentry.jpg "No Entry"
+[image7]: ./Resources/25_RoadWork.jpg "Road Work"
+[image8]: ./Resources/33_RightOnly.jpg "Right Only"
 
 
 ###Data Set Summary & Exploration

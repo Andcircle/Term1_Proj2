@@ -26,8 +26,6 @@ The goals / steps of this project are the following:
 
 ###Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
 I used the Collection library to calculate summary statistics of the traffic
 signs data set:
 
@@ -36,8 +34,6 @@ signs data set:
 * The size of test set is 4410
 * The shape of a traffic sign image is 32x32x3
 * The number of unique classes/labels in the data set is 43
-
-####2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 

@@ -61,14 +61,14 @@ My final model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
 | Convolution 5x5     	| 1x1 stride, same padding, outputs 28x28x10 	|
-| RELU					|												|
+| RELU					|	Nonlinearization											|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x10 				|
 | Convolution 5x5	    |  1x1 stride, same padding, outputs 10x10x20	|
+| RELU					|	Nonlinearization											|
 | Fully connected		| outputs 1*500        									|
 | Fully connected		| outputs 1*200        									|
 | Fully connected		| outputs 1*43        									|
-| Softmax				| etc.        									|
-|	Final Propability					|												|
+| Softmax				| outputs Final Propability       									|
 |						|												|
  
 

@@ -53,7 +53,7 @@ Color pictures are used as training input instead of grayscaled ones, because th
 All data should be normalized to 0 mean & 1 variance, considering numerical stability and efficiency of optimization.
 
 
-####2. Final CNN Model.
+####2. Model Architecture.
 
 My final model consisted of the following layers:
 
@@ -70,38 +70,38 @@ My final model consisted of the following layers:
 | Fully connected		| outputs 1*43        									|
 | Softmax				| outputs Final Propability       									|
 |						|												|
+
+Comparing with LeNet, the max pooling for second layer has been deleted, because mas pooling will eliminated some useful info.
+At the same time, the numbers of filter in each layer has been increased, pls refer to the above table.
+Although the training result is satisfying, this may cause more overfitting problem.
  
 
+####3. Model Training.
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+Epochs is set to 50, learning rate is 0.001, batch size is set to 128.
+Larger epochs will give more confident results.
 
-To train the model, I used an ....
+####4. Solution Approach
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+The LeNet architecture was chosen, because it's proved in previous proj for detecting info in grayscaled picture. Color picture has no big difference.  
+
+As mentioned above, color picture has more info (maybe some of them are redundant), so no grayscaling has been done to the original data set. Then the max pooling of seccond layer has been deleted in order to keep more info. The filter numbers has been increased a little bit in order to get better result.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* validation set accuracy is 0.939
+* test set accuracy is 0.932
+I trained the model several times with this final layout, the accuracy of validation set is in a range 0.935~0.96.
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+Several thing actually can be improved but haven't been tuned:
+Dropout strategy with proper drop rate;
+L2 regulation;
+And progressive learning rate;
  
-
 ###Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+####1. Acquiring New Images
 
-Here are five German traffic signs that I found on the web:
+Here are five German traffic signs that I found through google image:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
@@ -137,8 +137,3 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .04	      			| Bumpy Road					 				|
 | .01				    | Slippery Road      							|
 
-
-For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?

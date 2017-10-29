@@ -106,34 +106,37 @@ Here are five German traffic signs that I found through google image:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+They're not of the required size, so first step is to resize them to 32x32x3.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+The Road Work image might be difficult to classify because it has relatively small sample numbers in training set, and the graph is a litte bit complicated.
+
+####2. Model Performance.
 
 Here are the results of the prediction:
 
+
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Priority Road      		| Priority Road   									| 
+| Stop     			| Stop 										|
+| No Entry					| No Entry											|
+| Road Work 	      		| Road Work					 				|
+| Right Only 			| Right Only      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+So the prediction is 100% correct. 
+Also tried the same 5 pictures with other Model Architectures, e.g.grascaling the data/ 2 layer max pooling can only give accuracy of 0.8
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+####3. Model Certainty 
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The final model is very confident about the tested 5 pictures, the probability is very close to 1.
+Model Certainty here is highly related with training epochs, with epochs less than 30, the model feels uncertain about the result, and accuracy also decreased.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
+| probability			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.      		| Priority Road   									| 
+| 1.     			| Stop 										|
+| 1.					| No Entry											|
+| 1. 	      		| Road Work					 				|
+| 1. 			| Right Only      							|
 
